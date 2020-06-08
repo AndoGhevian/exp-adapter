@@ -13,5 +13,9 @@
     "adapter", "normalizer"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndoGhevian/exp-adapter.git"
+  }
 }
