@@ -1,0 +1,17 @@
+{
+  "name": "exp-adapter",
+  "version": "1.0.0",
+  "description": "explicit|express adapter",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adapter", "normalizer"
+  ],
+  "author": "",
+  "license": "ISC"
+}
