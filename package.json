@@ -1,21 +1,26 @@
 {
   "name": "exp-adapter",
   "version": "1.0.0",
-  "description": "explicit|express adapter",
-  "main": "index.js",
+  "description": "explicit express adapter",
+  "main": "src/index.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c ./jsdoc.json"
   },
   "keywords": [
-    "adapter", "normalizer"
+    "adapter",
+    "normalizer"
   ],
   "author": "",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/AndoGhevian/exp-adapter.git"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.4"
   }
 }

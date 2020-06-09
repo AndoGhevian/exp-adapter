@@ -1,17 +1,18 @@
 const validateConfig = require('./validateConfig')
 
-// this variable added for documentation purposes
-// ________________________________________________
-const configParam = {
-    clearUndefineds: false,
-    clearNulls: false,
-    toDefaults: {
-        null: false,
-        undefined: true
-    }
-}
-// ________________________________________________
+/**
+ * ConfigParam
+ * @typedef {Object} ConfigParam
+ * @property {boolean} [clearUndefineds] determin if to clear "undefineds" from results.
+ * @property {boolean} [clearNulls] determin if to clear "nulls" from results.
+ * @property {Object} [toDefaults] configuration for defaults if "null" or "undefined" value occures.
+ * @property {boolean} [toDefaults.null] determin if to fall-out to default if "null" occures in result.
+ * @property {boolean} [toDefaults.undefined] determin if to fall-out to default if "undefined" occures in result.
+ */
 
+/**
+ * class for creating adapter configuration instances
+ */
 class AdapterConfig {
     static defaultConfig = new AdapterConfig()
 
@@ -21,9 +22,13 @@ class AdapterConfig {
         null: false,
         undefined: true
     }
-    constructor(config = configParam) {
-        if (config === configParam) {
-            return // this means undefined provided
+    /**
+     * 
+     * @param {ConfigParam} config changes adapter configuration default settings
+     */
+    constructor(config) {
+        if (config === undefined) {
+            return
         }
         validateConfig(config)
         this.clearUndefineds = 'clearUndefineds' in config ? config.clearUndefineds : this.clearUndefineds
